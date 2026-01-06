@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Coffee Betting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>COFFEE <span class="highlight">RUSH</span></h1>
+            <p>Team Betting - High Stakes Edition</p>
+        </header>
+
+        <!-- Setup Phase -->
+        <section id="setup-phase">
+            <div class="control-panel">
+                <div class="player-count-control">
+                    <button id="btn-minus" class="icon-btn">-</button>
+                    <span id="player-count">3</span>
+                    <button id="btn-plus" class="icon-btn">+</button>
+                </div>
+                <label>Players</label>
+            </div>
+
+            <div class="names-grid" id="names-grid">
+                <!-- Dynamic Input Fields will be injected here -->
+            </div>
+
+            <div class="start-action">
+                <button id="btn-start" class="btn-primary">START GAME</button>
+            </div>
+        </section>
+
+        <!-- Game Phase -->
+        <section id="game-phase" class="hidden">
+            <div class="game-header">
+                <button id="btn-reset" class="btn-secondary">New Game</button>
+            </div>
+            
+            <div class="ladder-viewport">
+                <canvas id="ladder-canvas"></canvas>
+                <div id="start-nodes" class="nodes-row top"></div>
+                <div id="end-nodes" class="nodes-row bottom"></div>
+            </div>
+
+            <div id="result-modal" class="modal hidden">
+                <div class="modal-content">
+                    <h2 id="result-title">Result</h2>
+                    <p id="result-desc"></p>
+                    <button id="btn-close-modal">Close</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
